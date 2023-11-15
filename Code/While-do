@@ -1,0 +1,28 @@
+# Question
+    X = 1
+    while ( X < 10 ) do
+        X = X + 1
+    endwhile
+
+# Code
+
+Load One
+Store X
+
+While,  Load X
+        Subt Ten / x - 10 < 0 ?
+        SkipCond 000 / skip next line if x is smaller than 0
+        Jump End
+        Jump Do
+
+Do,  Load X
+     Add One
+     Store X
+     Jump While / continue the program until x = 10
+
+End,  Halt
+
+// Variable declaration
+One,  DEC 1
+X,  DEC 0
+Ten,  Dec 10
