@@ -1,0 +1,34 @@
+# Question
+    if ( X > Y )
+        X = X + X
+    else
+        Y = Y + Y
+
+# Code
+
+Input / take user input
+Store X
+Input / take user input
+Store Y 
+Load X
+Subt Y / X - Y
+SkipCond 800 / Skip next line if  X-Y > 0 
+Jump Else
+Jump If
+
+If,  Load X
+     Add X
+     Store X
+     Jump End
+
+Else,  Load Y
+       Add Y
+       Store Y
+       Jump End
+
+End,  Output 
+      Halt / stop the program
+
+// Variable declaration
+X,  DEC 0
+Y,  DEC 0
