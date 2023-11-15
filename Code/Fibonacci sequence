@@ -1,0 +1,59 @@
+📌 Brief for Fibonacci sequence
+      0, 1, 1, 2, 3, 5, 8, 13
+    
+      F(0) = 0
+      F(1) = 0 + 1
+           = 1
+      F(2) = 1 + 1
+           = 2
+      F(3) = 2 + 1
+           = 3
+      F(4) = 3 + 2
+           = 5
+
+# Do Fibonacci sequence for 1 - 11
+
+Begin,  Load Count / count < 10
+        Subt Ten  / count - 10 < 0
+        SkipCond 000 / skip next line if value in AC is smaller than 10
+        Jump End
+        Jump Cont
+
+COnt,  Load Count / load count into AC
+       Add One / increment value in AC by 1
+       Store Count
+       Jns Fibb / The JnS instruction stores the return address in the first word of the subroutine.
+       Jump Begin 
+
+Fibb,  HEX 000
+       Clear / clear value in AC before starts perform fibbonacci 
+
+// Fi = F1 + F2
+       Load F1
+       Add F2
+       Store Fi
+
+// F1 = F2
+       Load F2
+       Store F1
+
+// F2 = Fi
+       Load Fi
+       Store F2
+
+// Output the result
+       Load Fi
+       Output
+
+      JumpI Fibb
+
+// Stop the program
+End,  Halt
+
+//Variable declaration
+Count,	DEC 0
+Ten,	DEC 10
+One,	DEC 1
+F1,	HEX 0
+F2, HEX 1
+Fi,	HEX 0
