@@ -1,0 +1,30 @@
+# Display hello world using ADR command
+
+Begin,  LoadI myAdd
+        Skipcond 400
+        Jump Cont
+        Jump End
+Cont,   Output
+        Load myAdd
+        Add One
+        Store myAdd
+        Jump Begin
+End,  Halt
+
+// Variable declaration
+One, DEC 1
+myAdd, ADR str
+// based on ASCII table
+str,  HEX 48 / H
+      HEX 65 / E
+      HEX 6C / L
+      HEX 6C / L
+      HEX 6F / O
+      HEX D / carriage return
+      HEX 57 / W
+      HEX 6F / O
+      HEX 72 / R
+      HEX 6C / L
+      HEX 64 / D
+      HEX 0 / Null
+        
