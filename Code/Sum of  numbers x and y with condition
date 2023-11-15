@@ -1,0 +1,44 @@
+# Write assembly code that add x and y if z = 1 or subtract y from x if z = 0 and 
+  from turn a into A then print, and turn # into $.
+
+# Code
+
+Input / take user input for X
+Store X
+Input
+Store Y / take user input for Y
+Input / take user input for Z
+Store Z
+SkipCond 400 / skip next line if z = 0
+Jump Adder
+Jump Subtract
+
+Adder,  Load X
+        Add Y
+        Output
+        Jump Cont
+        
+Cont,	Load A
+  		Subt twenty
+      Output
+		  Load hash
+      Add star
+      Output
+		  Jump End
+
+Subtract,	Load X
+			    Subt Y
+          Output
+          Jump End
+
+End,	Halt
+
+// Variable declaration
+One,	DEC 1
+twenty,	DEC 20
+hash,	HEX 23
+star,	HEX 7
+X,	DEC 0
+Y,	DEC 0
+Z,	DEC 0
+A,	HEX 61
