@@ -1,0 +1,21 @@
+# Display the output using for loop
+# condition : i < 10 
+
+Begin,  Load Count 
+        Subt Ten /subt i with 10 ( check condition for i-10 < 0 )
+        SkipCond 000 / skip next line if value in AC smaller than 10
+        Jump Cont
+        Jump End
+
+Cont,  Load Count
+       Output
+       Add One / increment the value in AC by 1
+       Store Count
+       Jump Begin
+
+End,   Halt / stop the program
+
+// Variable declaration
+One,  DEC 1
+Count,  DEC 0
+Ten,  DEC 10
