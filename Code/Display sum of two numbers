@@ -1,0 +1,16 @@
+# Display sum of two numbers x and y
+
+Input / take user input
+Store X / store user input for number x
+Input / take user input
+Store Y / store user input for number y
+Load X / load x to AC
+Add Y / add number y to x
+Store Z / store addition to Z
+Output / display
+Halt / stop the program
+
+// Variable declaration
+X, DEC 0 
+Y, DEC 0
+Z, DEC 0
